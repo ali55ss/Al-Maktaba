@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.technostacks.almaktaba">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".AlMaktabaApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SignUpActivity"
+            android:theme="@style/FullScreen"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ForgotPassActivity"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".activity.SuggestUniActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!--
+        <receiver android:name=".broadcasts.LocaleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        -->
+        <!--
+        <receiver android:name=".broadcasts.DownloadReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <activity android:name=".activity.ChangePassActivity" />
+        <activity android:name=".activity.CollegesActivity" />
+        <activity android:name=".activity.DepartmentsActivity" />
+        <activity android:name=".activity.CoursesActivity" />
+        <activity android:name=".activity.DocumentListingActivity" />
+        <activity
+            android:name=".activity.UploadDocumentActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.TransparentReportActivity"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity android:name=".activity.WebViewActivity" />
+        <activity
+            android:name=".activity.DocumentDetectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity android:name=".activity.CreateNewAdjustDocActivity" />
+        <activity android:name=".activity.CropImageActivity" />
+        <activity android:name=".activity.PreviewActivity" />
+        <activity
+            android:name=".activity.UserVerificationActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="5c32c9702bb31adf7b55226a42f6567b2f2a5093" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/ad_mob_key" />
+
+        <receiver
+            android:name=".broadcasts.DownloadReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+    </application>
+
+</manifest>

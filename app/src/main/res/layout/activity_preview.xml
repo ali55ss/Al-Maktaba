@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.technostacks.almaktaba.activity.PreviewActivity">
+
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/preview_pdfview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="2dp"
+        android:background="@drawable/pdf_viewer_border_bg"
+        android:layout_above="@+id/btn_upload_now"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_upload_now"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/upload_now"
+        android:background="@drawable/round_btn_bg"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="10dp"
+
+        />
+</RelativeLayout>

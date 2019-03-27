@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:ignore="UnusedAttribute">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        android:transitionGroup="false"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_toolbar_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:paddingRight="8dp">
+
+                <ImageView
+                    android:id="@+id/tv_toolbar_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/ic_back"
+                    android:gravity="center_vertical"
+                    android:padding="2dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_back"
+                    android:tint="@color/white" />
+
+                <!--<RelativeLayout
+                    android:id="@+id/rl_Addnew"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/style_dotted_v" />
+
+                    <ImageView
+                        android:id="@+id/imageview"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_plush_new" />
+
+                </RelativeLayout>-->
+                <TextView
+                    android:id="@+id/txt_Title"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start|center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="8dp"
+                    android:layout_marginRight="15dp"
+                    android:singleLine="true"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="18sp"
+                    tools:text="Doc" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_toolbar_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/preview"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:textSize="16sp"
+
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/create_new_adView"
+        android:layout_below="@+id/toolbar"
+        >
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/txt_PageCount"
+         />
+
+    <TextView
+        android:id="@+id/txt_PageCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_nav_edit_doc"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        tools:text="3/6" />
+
+    <include
+        android:id="@+id/bottom_nav_edit_doc"
+        layout="@layout/bottom_navigation_pspdfcustom_view"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        />
+
+    </RelativeLayout>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/create_new_adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/ad_mob_unit_id"
+        android:visibility="gone"
+        >
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/round_doc_selection_bg"
+        >
+
+        <TextView
+            android:id="@+id/tv_scan_document"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/scan_document"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackground"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/tv_videos"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/videos"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackground"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/tv_photos"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/photos"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackground"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/tv_Browse_doc"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/browse_document"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackground"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/round_doc_selection_bg"
+        android:text="@string/cancel"
+        android:textSize="16sp"
+        android:layout_marginBottom="10dp"
+        />
+
+</LinearLayout>

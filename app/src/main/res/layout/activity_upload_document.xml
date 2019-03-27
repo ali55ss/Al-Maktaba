@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.technostacks.almaktaba.activity.UploadDocumentActivity"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_select_course_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="70dp"
+        android:visibility="visible"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/ti_upload_course_code"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:hint="@string/code"
+            >
+
+            <EditText
+                android:id="@+id/ed_upload_course_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:inputType="number"
+                tools:text="123"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:clickable="false"
+                android:textColor="@color/black"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/ti_upload_course_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:hint="@string/course_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+
+            <EditText
+                android:id="@+id/ed_upload_course_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                tools:text="123"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:clickable="false"
+                android:textColor="@color/black"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ti_document_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/document_title"
+        android:layout_marginTop="30dp"
+        >
+
+        <EditText
+            android:id="@+id/ed_document_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            tools:text="123"
+            android:focusableInTouchMode="true"
+            android:textColor="@color/black"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <EditText
+        android:id="@+id/tv_document_details"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="20dp"
+        android:gravity="start"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:textColor="@color/black"
+        android:hint="@string/please_write_document_details"
+        android:background="@drawable/round_ed_bg"
+        />
+
+    <Button
+        android:id="@+id/btn_choose_docs"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="@drawable/round_btn_bg"
+        android:text="@string/choose_your_docs"
+        android:textColor="@color/colorPrimary" />
+
+</LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@color/white"
+    tools:context="com.technostacks.almaktaba.fragment.UniversityFragment">
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search_uni"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/round_ed_bg"
+        app:queryHint="@string/search"
+        app:searchIcon="@drawable/ic_search"
+        app:iconifiedByDefault="false"
+        />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_universities"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_uni"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcv_universities"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_uni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_floating_add"
+        android:scaleType="center"
+        app:borderWidth="0dp"
+        android:visibility="visible"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_uni_guest_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_user"
+        android:tint="@color/white"
+        android:scaleType="center"
+        app:borderWidth="0dp"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_empty_vw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_no_record" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/no_records_available"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

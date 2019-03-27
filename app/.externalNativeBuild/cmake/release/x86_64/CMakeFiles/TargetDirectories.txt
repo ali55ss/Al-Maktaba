@@ -1,0 +1,2 @@
+E:/Android/Workspace/Android_almaktaba/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/edit_cache.dir
+E:/Android/Workspace/Android_almaktaba/app/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/rebuild_cache.dir

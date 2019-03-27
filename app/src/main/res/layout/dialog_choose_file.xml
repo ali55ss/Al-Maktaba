@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_ed_bg"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="25sp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:text="@string/choose_university_logo_from"
+        android:textStyle="bold"
+        android:textSize="18sp"
+    />
+
+    <TextView
+        android:id="@+id/tv_camera"
+        android:layout_width="match_parent"
+        android:layout_height="45sp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="?attr/selectableItemBackground"
+        android:textColor="@color/black"
+        android:text="@string/open_camera"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/tv_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:background="?attr/selectableItemBackground"
+        android:textColor="@color/black"
+        android:text="@string/photo_library"
+        android:textSize="16sp"
+    />
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:background="?attr/selectableItemBackground"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="@string/cancel"
+        android:textSize="16sp"
+        />
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layoutDirection="ltr"
+    android:weightSum="5">
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_navigation_scan"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bottom_navigation_selector"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/scan_n" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_navigation_filter"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bottom_navigation_selector"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/filter" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_navigation_crop"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bottom_navigation_selector"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/crop" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_navigation_rotate"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bottom_navigation_selector"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/rotate" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_navigation_delete"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bottom_navigation_selector"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/delete" />
+
+    </LinearLayout>
+</LinearLayout>
